@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'models/cart.dart';
 import 'screens/home_screen.dart';
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
         title: 'E-commerce App',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
+          fontFamily: GoogleFonts.poppins().fontFamily,
           scaffoldBackgroundColor: Colors.white,
           appBarTheme: const AppBarTheme(
             backgroundColor: Colors.white,
