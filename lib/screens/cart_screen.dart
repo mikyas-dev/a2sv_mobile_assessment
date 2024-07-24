@@ -91,10 +91,32 @@ class CartScreen extends StatelessWidget {
           Expanded(
             child: ListView.builder(
               itemCount: listnableCart.items.length,
-              itemBuilder: (ctx, i) => CartItemWidget(
-                cartItem: listnableCart.items.values.toList()[i],
-                removeItem: listnableCart.removeItem,
-              ),
+              itemBuilder: (ctx, i) {
+                final cartItem = listnableCart.items.values.toList()[i];
+                return Dismissible(
+                  key: ValueKey(cartItem),
+                  direction: DismissDirection.endToStart,
+                  onDismissed: (direction) {
+                    listnableCart.removeItemForDismissable(cartItem.productId);
+                  },
+                  background: Container(
+                    color: Colors.red,
+                    alignment: Alignment.centerRight,
+                    padding: const EdgeInsets.only(right: 20),
+                    child: const Icon(
+                      Icons.delete,
+                      color: Colors.white,
+                      size: 40,
+                    ),
+                  ),
+                  child: CartItemWidget(
+                    cartItem: cartItem,
+                    removeItem: listnableCart.removeItemForDismissable,
+                  
+                  
+                  ),
+                );
+              },
             ),
           )
         ],

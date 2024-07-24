@@ -12,6 +12,8 @@ class Product extends Equatable {
   final String? category;
   final String? image;
   final Rating? rating;
+  final Rating? count;
+  final int quantity = 20;
 
   const Product({
     this.id,
@@ -21,6 +23,7 @@ class Product extends Equatable {
     this.category,
     this.image,
     this.rating,
+    this.count,
   });
 
   factory Product.fromMap(Map<String, dynamic> data) => Product(
@@ -32,6 +35,7 @@ class Product extends Equatable {
         image: data['image'] as String?,
         rating:
             data['rating'] == null ? null : Rating.fromMap(data['rating'] as Map<String, dynamic>),
+        count: data['count'] == null ? null : Rating.fromMap(data['count'] as Map<String, dynamic>),
       );
 
   Map<String, dynamic> toMap() => {
@@ -42,6 +46,7 @@ class Product extends Equatable {
         'category': category,
         'image': image,
         'rating': rating?.toMap(),
+        'count': count?.toMap(),
       };
 
   factory Product.fromJson(String data) {
@@ -58,6 +63,7 @@ class Product extends Equatable {
     String? category,
     String? image,
     Rating? rating,
+    Rating? count,
   }) {
     return Product(
       id: id ?? this.id,
@@ -67,6 +73,7 @@ class Product extends Equatable {
       category: category ?? this.category,
       image: image ?? this.image,
       rating: rating ?? this.rating,
+      count: count ?? this.count,
     );
   }
 
@@ -83,6 +90,7 @@ class Product extends Equatable {
       category,
       image,
       rating,
+      count,
     ];
   }
 }
