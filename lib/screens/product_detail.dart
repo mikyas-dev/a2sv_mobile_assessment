@@ -25,7 +25,7 @@ class ProductDetailScreen extends StatelessWidget {
             CachedNetworkImage(
               imageUrl: product.image!,
               fit: BoxFit.cover,
-              height: 300, // Adjusted height for better appearance
+              height: 400, // Adjusted height for better appearance
               width: double.infinity,
             ),
             Padding(

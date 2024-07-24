@@ -58,3 +58,9 @@ Enhance the given Flutter application by adding new features, improving the UI, 
 - [Change Notifier](https://api.flutter.dev/flutter/foundation/ChangeNotifier-class.html)
 - [Listenable Builder](https://api.flutter.dev/flutter/widgets/ListenableBuilder-class.html)
 - Feel free to use any package of your choice for any purpose.
+
+
+![alt text](<Simulator Screenshot - iPhone 15 Pro - 2024-07-24 at 13.50.42.png>) 
+![alt text](<Simulator Screenshot - iPhone 15 Pro - 2024-07-24 at 13.50.35.png>)
+![alt text](<Simulator Screenshot - iPhone 15 Pro - 2024-07-24 at 13.56.06.png>)
+![alt text](<Simulator Screenshot - iPhone 15 Pro - 2024-07-24 at 13.56.54.png>)
